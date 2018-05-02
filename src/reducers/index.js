@@ -1,11 +1,9 @@
 import pizzaBases from './bases'
-import price from './price'
 import pizzaSauces from './sauces'
-import pizzaTopping from './toppings'
+import pizzaToppings from './toppings'
 
 export default {
     pizzaBases,
-    price,
     pizzaSauces,
-    pizzaTopping
+    pizzaToppings
 }

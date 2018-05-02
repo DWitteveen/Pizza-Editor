@@ -34,13 +34,13 @@ class PizzaCreatorTopping extends PureComponent {
               <select value={this.state.value} 
               price={this.state.value.price} 
               onChange={this.handleChange}>
-                <option value="Pineapple € 0.50" price="0.50">Pineapple € 0,50</option>
-                <option value="Corn € 0.50">Corn € 0,50</option>
-                <option value="Olives (green) € 0.50">Olives (green) € 0,50</option>
-                <option value="Red onion € 0.50">Red onion € 0,50</option>
-                <option value="Spinach € 0.50">Spinach € 0,50</option>
-                <option value="Cherry tomatoes € 0.50">Cherry tomatoes € 0,50</option>
-                <option value="Chicken € 0.50">Chicken € 0,50</option>
+                <option value="Pineapple">Pineapple € 0,50</option>
+                <option value="Corn">Corn € 0,50</option>
+                <option value="Olives (green)">Olives (green) € 0,50</option>
+                <option value="Red onion">Red onion € 0,50</option>
+                <option value="Spinach">Spinach € 0,50</option>
+                <option value="Cherry tomatoes">Cherry tomatoes € 0,50</option>
+                <option value="Chicken">Chicken € 0,50</option>
               </select>
             </label>
           </form>

@@ -35,3 +35,16 @@ h1 {
     font-size: 20px;
     color: #000000;
 }
+
+p {
+     
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+}
+
+.result {
+    font-style: italic; 
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+    font-weight: bold;
+}

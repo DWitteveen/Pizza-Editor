@@ -32,7 +32,6 @@ class PizzaCreatorBase extends PureComponent {
           <label>
           <h1>Pick your pizza Bottom</h1>
             <select value={this.state.value} 
-            // price={this.state.price} 
             onChange={this.handleChange}>
               <option value="25cm NY Style">25cm NY Style € 8,99</option>
               <option value="30cm NY Style">30cm NY Style € 11,49</option>

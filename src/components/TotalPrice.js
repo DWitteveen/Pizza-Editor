@@ -4,7 +4,6 @@ import { pizzaBases} from './PizzaBases'
 import { pizzaSauces} from './PizzaSauces'
 
 
-
 class TotalPrice extends PureComponent {
     constructor (props) {
         super(props) ;
@@ -15,7 +14,7 @@ class TotalPrice extends PureComponent {
 
     }
   
-    pizzaPrice() {
+     pizzaPrice() {
         if (pizzaBases[this.props.pizzaBases]) {
        return (pizzaBases[this.props.pizzaBases] )
      } else 
@@ -28,9 +27,18 @@ class TotalPrice extends PureComponent {
      } else 
        return 0
      }
+
+     toppingPrice() {
+        console.log('hello',this.props.pizzaTopping)
+        if (this.props.pizzaTopping) {
+       return (this.props.pizzaTopping.length*0.5)
+     } else 
+       return 0
+     }
     
+     
      totalPrice() {
-         const totalWithDrone = this.pizzaPrice() + this.saucePrice() 
+         const totalWithDrone = this.pizzaPrice() + this.saucePrice() + this.toppingPrice() 
          if (this.state.turbodrone) {
             return totalWithDrone * 1.10
          } else {
@@ -51,17 +59,15 @@ class TotalPrice extends PureComponent {
     
         
 
-    render() { 
+     render() { 
         console.log(this.state.turbodrone)
-        console.log(pizzaSauces[this.props.pizzaSauce])
+        console.log(pizzaSauces[this.props.pizzaTopping])
 
         return(
-            <div>
-                <p>{this.totalPrice()}</p>
-
-                <input onClick= {this.handelClick} id="checkBox" type="checkbox" />
- 
-            </div>     
+            <div>         
+                <p>Turbo drone delivery?</p><input  onClick= {this.handelClick} id="checkBox" type="checkbox" />               
+                <p className = "result"> Your total price: € {this.totalPrice().toFixed(2)}</p>        
+             </div>     
         )
     }
 }     
@@ -71,7 +77,8 @@ class TotalPrice extends PureComponent {
 function mapStateToProps(state){
     return {
       pizzaBases: state.pizzaBases,
-      pizzaSauce: state.pizzaSauces
+      pizzaSauce: state.pizzaSauces,
+      pizzaTopping: state.pizzaToppings
     }
   }
   

@@ -25,10 +25,3 @@ export const addTopping = (topping) => {
   }
 }
 
-export const totalPrice = ( price ) => {
-  return {
-    type: TOTAL_PRICE,
-    payload: price
-  }
-}
-
