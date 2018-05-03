@@ -1,7 +1,6 @@
 import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
 import {addTopping} from '../actions/index'
-// import {pizzaSauces} from './PizzaSauces'
 import store from '../store'
 
 

@@ -15,8 +15,8 @@ class TotalPrice extends PureComponent {
     }
   
      pizzaPrice() {
-        if (pizzaBases[this.props.pizzaBases]) {
-       return (pizzaBases[this.props.pizzaBases] )
+        if (pizzaBases[this.props.pizzaBase]) {
+       return (pizzaBases[this.props.pizzaBase] )
      } else 
        return 0
      }
@@ -29,7 +29,7 @@ class TotalPrice extends PureComponent {
      }
 
      toppingPrice() {
-        console.log('hello',this.props.pizzaTopping)
+        console.log('test',this.props.pizzaTopping)
         if (this.props.pizzaTopping) {
        return (this.props.pizzaTopping.length*0.5)
      } else 
@@ -76,7 +76,7 @@ class TotalPrice extends PureComponent {
 
 function mapStateToProps(state){
     return {
-      pizzaBases: state.pizzaBases,
+      pizzaBase: state.pizzaBases,
       pizzaSauce: state.pizzaSauces,
       pizzaTopping: state.pizzaToppings
     }

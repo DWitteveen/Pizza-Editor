@@ -43,8 +43,8 @@ p {
 }
 
 .result {
-    font-style: italic; 
-    text-transform: uppercase; 
+    /* font-style: italic;  */
+    /* text-transform: uppercase;  */
     letter-spacing: 2px;
     font-weight: bold;
 }

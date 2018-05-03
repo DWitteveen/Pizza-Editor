@@ -1,7 +1,6 @@
 export const ADD_BASE = "ADD_BASE"
 export const ADD_SAUCE = "ADD_SAUCE"
 export const ADD_TOPPING = "ADD_TOPPING"
-export const TOTAL_PRICE = "TOTAL_PRICE"
 
 
 export const addBase = (base) => {
